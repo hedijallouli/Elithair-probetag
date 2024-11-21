@@ -1,0 +1,129 @@
+@import url("https://fonts.cdnfonts.com/css/rooneysans");
+
+body {
+  font-family: "RooneySans", sans-serif;
+  font-weight: 340;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 50px 100px;
+}
+.block-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.heading-text-large {
+  font-weight: 460;
+  font-size: 26px;
+  line-height: 32.5px;
+}
+.left-block .content-text {
+  gap: 15px;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 335px;
+  gap: 10px;
+}
+.button-wrapper a:first-child {
+  width: 335px;
+  min-height: 60px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #314ec0;
+  color: white;
+  text-decoration: none;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.button-wrapper a:last-child {
+  font-family: Sofia Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15.4px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.right-block {
+  display: grid;
+  min-height: 568px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: rgba(74, 180, 255, 0.2);
+}
+
+.right-block .content-text p {
+  min-height: 44px;
+  padding-left: 50px;
+  position: relative;
+}
+
+.right-block .content-text p::before {
+  display: inline-flex;
+  content: "";
+
+  background-image: url("checkmark.svg");
+  background-size: 30px 30px;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heading-text-normal {
+  font-weight: 500;
+}
+
+.image-wrapper img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-width: 316px;
+}
+.button-wrapper.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 50px 0;
+    font-size: 16px;
+    font-weight: 340;
+    line-height: 20px;
+  }
+  .heading-text-large {
+    font-weight: 460;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .block-container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+  .left-block .button-wrapper {
+    display: none;
+  }
+  .button-wrapper.mobile {
+    display: flex;
+    width: 100%;
+  }
+  .button-wrapper.mobile a {
+    width: 100%;
+  }
+  .image-wrapper img {
+    width: 100%;
+    min-width: unset;
+    max-width: 316px;
+  }
+}
